@@ -1,0 +1,24 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<h2>List of Faculties (Admin's view):</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Pos.</th>
+      <th scope="col">Faculty</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let faculty of faculties | async'>
+      <th scope="row">{{ faculty.id }}</th>
+      <td>{{ faculty.facultyName }}</td>
+      <td><button (click)="deleteFaculty(faculty.id)" class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
