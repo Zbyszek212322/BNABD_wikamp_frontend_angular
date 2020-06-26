@@ -8,6 +8,11 @@
       <li class="nav-item" *ngIf="showAdminBoard">
         <a href="/admin" class="nav-link" *ngIf="isLoggedIn" routerLink="admin">Admin Board</a>
       </li>
+
+      <li class="nav-item" *ngIf="showAdminBoard">
+        <a href="/add" class="nav-link" *ngIf="isLoggedIn" routerLink="add">Add Faculty</a>
+      </li>
+
       <li class="nav-item" *ngIf="showLecturerBoard">
         <a href="/lecturer" class="nav-link" *ngIf="isLoggedIn" routerLink="lecturer">Lecturer</a>
       </li>
@@ -24,10 +29,10 @@
 
     <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
       <li class="nav-item">
-        <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+        <a class="nav-link" >{{ username }}</a>
       </li>
       <li class="nav-item">
-        <a href class="nav-link" (click)="logout()">LogOut</a>
+        <a href class="nav-link" (click)="logout()">Logout</a>
       </li>
     </ul>
   </nav>

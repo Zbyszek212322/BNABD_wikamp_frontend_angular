@@ -7,16 +7,17 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">Pos.</th>
+      <!-- <th scope="col">Id</th> -->
       <th scope="col">Faculty</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor='let faculty of faculties | async'>
-      <th scope="row">{{ faculty.id }}</th>
+      <!-- <th scope="row">{{ faculty.id }}</th> -->
       <td>{{ faculty.facultyName }}</td>
       <td><button (click)="deleteFaculty(faculty.id)" class="btn btn-danger">Delete</button>
+          <button (click)="updateFaculty(faculty.id)" class="btn btn-success" style="margin-left: 10px">Update</button>
       </td>
     </tr>
 

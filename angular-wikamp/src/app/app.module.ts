@@ -12,6 +12,8 @@ import { BoardAdminComponent } from './components/board-admin/board-admin.compon
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { authInterceptorProviders } from './helpers/auth.interceptor';
+import { CreateFacultyComponent } from './components/create-faculty/create-faculty.component';
+import { UpdateFacultyComponent } from './components/update-faculty/update-faculty.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { authInterceptorProviders } from './helpers/auth.interceptor';
     LoginComponent,
     HomeComponent,
     BoardLecturerComponent,
-    BoardAdminComponent
+    BoardAdminComponent,
+    CreateFacultyComponent,
+    UpdateFacultyComponent
   ],
   imports: [
     BrowserModule,

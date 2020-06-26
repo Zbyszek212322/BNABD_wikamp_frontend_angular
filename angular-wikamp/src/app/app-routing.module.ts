@@ -5,6 +5,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { BoardLecturerComponent } from './components/board-lecturer/board-lecturer.component';
 import { BoardAdminComponent } from './components/board-admin/board-admin.component';
+import { CreateFacultyComponent } from './components/create-faculty/create-faculty.component';
+import { UpdateFacultyComponent } from './components/update-faculty/update-faculty.component';
 
 
 const routes: Routes = [
@@ -13,6 +15,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'lecturer', component: BoardLecturerComponent },
   { path: 'admin', component: BoardAdminComponent },
+  { path: 'add', component: CreateFacultyComponent },
+  { path: 'update/:id', component: UpdateFacultyComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

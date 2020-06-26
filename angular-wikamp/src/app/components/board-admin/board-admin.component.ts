@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AdminService } from 'src/app/services/admin.service';
 import { Faculty } from 'src/app/models/faculty';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-board-admin',
@@ -13,7 +14,8 @@ export class BoardAdminComponent implements OnInit {
   faculties: Observable<Faculty[]>;
   mySubscription: any;
 
-  constructor(private adminService: AdminService) { }
+  constructor(private adminService: AdminService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.reloadData();
@@ -31,6 +33,10 @@ export class BoardAdminComponent implements OnInit {
         this.reloadData();
       },
       error => console.log(error));
+  }
+
+  updateFaculty(id: number) {
+    this.router.navigate(['update', id]);
   }
 
 }
